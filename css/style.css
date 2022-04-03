@@ -20,7 +20,7 @@ body {
     border-radius: 0;
     border-bottom: 10px solid black;
   }
-  
+
   /* Table */
 
   .description{
@@ -58,8 +58,9 @@ body {
     background-color: #77dd77;
     color: white;
   }
-  
+  /*save button*/
   .saveBtn {
+    cursor: pointer;
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
