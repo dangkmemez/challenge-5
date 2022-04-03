@@ -20,7 +20,7 @@ $(document).ready(function () {
     for (var i = 0; i < dayHours.length; i++) {
 
         //let current time be a variable
-        let dataHour = [i + 9];
+        let dataHour = [i + 8];
 
         //create a row
         let createRow = $("<tr>");
@@ -38,17 +38,27 @@ $(document).ready(function () {
 
     };
 
-//Event listener for the save button
-$('saveBtn').click(function (e) {
-    e.preventDefault();
-    //picks row to save to local storage
-    var identifyRow = $(this).data('hour');
-    let taskColumn = {
-        hour: $(this).data('hour'),
-        message: $('#' + identifyRow + 'text').val(),
+    //local storage initiated
+    localStor();
+    function localStor() {
+        for (var i = 8; i < 19; i++) {
+            //gives text areas storage
+            $('#' + i + 'text').val(localStorage.getItem(i));
+        }
     };
-    localStorage.setItem(taskColumn.hour, taskColumn.message);
-    console.log('saved')
-});
+
+
+    //Event listener for the save button
+    $('.saveBtn').click(function (e) {
+        e.preventDefault();
+        //picks row to save to local storage
+        var identifyRow = $(this).data('hour');
+        let taskColumn = {
+            hour: $(this).data('hour'),
+            message: $('#' + identifyRow + 'text').val(),
+        };
+        localStorage.setItem(taskColumn.hour, taskColumn.message);
+        console.log('saved')
+    });
 
 });
