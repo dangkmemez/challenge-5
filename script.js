@@ -26,9 +26,9 @@ $(document).ready(function () {
         //first column of the row information with dayHours and dataHour
         let timeColumn = $(`<td class="align-middle"><p class="time" id="$(dayHours[i]}" data-hour="${dataHour}">${dayHours[i]}</p></td>`);
         //second column with textbox and dataHour
-        let taskColumn = $(`<td class="align-middle"><textarea class="form-control taskText" id="${dataHour}text" rows="3"></textarea></td>`);
+        let taskColumn = $(`<td class="align-middle"><textarea class="form-control border-0 taskText" id="${dataHour}text" rows="3"></textarea></td>`);
         //third column with save button and dataHour
-        let saveColumn = $(`<td class="align-middle"><i class="far fa-save fa-3x saveBtn" data-hour="${dataHour}"></i></td>`);
+        let saveColumn = $(`<td class="align-middle"><i class="far fa-save fa-5x saveBtn btn-block" data-hour="${dataHour}"></i></td>`);
 
         //append table data to the table row
         createRow.append(timeColumn, taskColumn, saveColumn);
