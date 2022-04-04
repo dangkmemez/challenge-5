@@ -21,7 +21,6 @@ $(document).ready(function () {
 
         //let current time be a variable
         let dataHour = [i + 8];
-
         //create a row
         let createRow = $("<tr>");
         //first column of the row information with dayHours and dataHour
@@ -35,7 +34,6 @@ $(document).ready(function () {
         createRow.append(timeColumn, taskColumn, saveColumn);
         //append the table row to the body of the html table
         $('tbody').append(createRow);
-
     };
 
     //local storage initiated
@@ -47,18 +45,41 @@ $(document).ready(function () {
         }
     };
 
+    //Color-code for current and future time loop
+    for (var i = 8; i < 19; i++) {
 
-    //Event listener for the save button
-    $('.saveBtn').click(function (e) {
-        e.preventDefault();
-        //picks row to save to local storage
-        var identifyRow = $(this).data('hour');
-        let taskColumn = {
-            hour: $(this).data('hour'),
-            message: $('#' + identifyRow + 'text').val(),
+            if (currentHour > i) {
+                //make background grey if past time
+            $('.timeColor')
+                .eq(i - 8)
+                .css('background-color', '#d3d3d3');
+            }
+
+            //make the background red if it is the current hour
+            if (currentHour === i) {
+                $('.timeColor')
+                    .eq(i - 8)
+                    .css('background-color', '#ff6961');
+            }
+            // Make the background green if it is the current hour
+            if (currentHour < i) {
+                $('.timeColor')
+                    .eq(i - 8)
+                    .css('background-color', '#77dd77');
+            }
         };
-        localStorage.setItem(taskColumn.hour, taskColumn.message);
-        console.log('saved')
-    });
 
-});
+        //Event listener for the save button
+        $('.saveBtn').click(function (e) {
+            e.preventDefault();
+            //picks row to save to local storage
+            var identifyRow = $(this).data('hour');
+            let taskColumn = {
+                hour: $(this).data('hour'),
+                message: $('#' + identifyRow + 'text').val(),
+            };
+            localStorage.setItem(taskColumn.hour, taskColumn.message);
+            console.log('saved')
+        });
+
+    });
