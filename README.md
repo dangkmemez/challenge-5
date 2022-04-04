@@ -3,7 +3,7 @@
 This application allows users to type events into their schedule. It is color-coded to show past, current, and future hours.
 <br>
 <h3> Link to deployed website:</h3> <br>
-<a href:https://dangkmemez.github.io/challe>Challenge-5</a>
+<a href:"https://dangkmemez.github.io/challe">Challenge-5</a>
 
 <h2>Technologies Used:</h2>
     <br>
