@@ -4,7 +4,7 @@ This application allows users to type events into their schedule. It is color-co
 Technologies Used
 HTML CSS JavaScript
 
-User Story
+User Story: <br>
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
