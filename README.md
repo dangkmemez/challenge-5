@@ -1,19 +1,18 @@
-<h1>Work Day Scheduler<h1> 
+<h1>Work Day Scheduler</h1> 
     <br>
 This application allows users to type events into their schedule. It is color-coded to show past, current, and future hours.
 
-Technologies Used:
+<h2>Technologies Used:</h2>
     <br>
-HTML CSS JavaScript
+HTML, CSS, JavaScript
 
-User Story: 
+<h2>User Story:</h2> 
     <br>
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively.
     
-Acceptance Criteria: <br>
-    
+<h2>Acceptance Criteria:</h2> <br>
 GIVEN I am using a daily planner to create a schedule:
 1. WHEN I open the planner,
     THEN the current day is displayed at the top of the calendar.
@@ -27,4 +26,5 @@ GIVEN I am using a daily planner to create a schedule:
     THEN the text for that event is saved in local storage.
 6. WHEN I refresh the page,
     THEN the saved events persist.
-
+<h2>Mock up:</h2> <br>
+<img src="./challenge-5/assets/mock-up.png>
